@@ -24,3 +24,4 @@ const messageHandlersMiddleware = async (context, next) => {
     // console.log(context.message);
     return await next();
 };
+//# sourceMappingURL=generatedMessageHandlers.js.map

@@ -7,3 +7,4 @@ export function choice(array) {
     });
     return result;
 }
+//# sourceMappingURL=random.js.map

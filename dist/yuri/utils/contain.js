@@ -5,3 +5,4 @@ export default function contain(message, triggers) {
     const text = normalizeString(message);
     return triggers.every(t => t.some(s => text.includes(s)));
 }
+//# sourceMappingURL=contain.js.map

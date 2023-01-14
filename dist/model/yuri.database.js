@@ -30,3 +30,4 @@ export const smile = {
     },
     tilda: ['~', '~', '~~', '~~~'],
 };
+//# sourceMappingURL=yuri.database.js.map

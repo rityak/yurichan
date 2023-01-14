@@ -18,3 +18,4 @@ await execute(() => {
         .catch(console.error);
     return bot;
 });
+//# sourceMappingURL=index.js.map

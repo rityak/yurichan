@@ -3,3 +3,4 @@ node_modules
 .IDEA
 .idea
 .env
+dist/**/*.js.map

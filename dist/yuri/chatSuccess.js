@@ -7,3 +7,4 @@ export default function chatSuccess(bot, successChatIds) {
     };
     bot.use(chatSuccessMiddleware);
 }
+//# sourceMappingURL=chatSuccess.js.map

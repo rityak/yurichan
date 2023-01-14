@@ -1,29 +1,29 @@
-import * as dotenv from 'dotenv';
-import chalk from 'chalk';
-import chalkTemplate from 'chalk-template';
+import * as dotenv from 'dotenv'
+import chalkTemplate from 'chalk-template'
 
 export const execute = async (executedFunction: () => any) => {
-  let result: any;
+  let result: any
 
   try {
-    console.log(chalkTemplate`{blue [Yuri] |} bot launches...`);
-    dotenv.config();
+    console.clear()
+    console.log(chalkTemplate`{blue [Yuri] |} bot launches...`)
+    dotenv.config()
 
     process.on('ETIMEDOUT', message => {
-      console.log(`ETIMEDOUT ${message ?? 'in process'}`);
-    });
+      console.log(`ETIMEDOUT ${message ?? 'in process'}`)
+    })
 
-    result = await executedFunction();
+    result = await executedFunction()
 
     console.log(
-      chalkTemplate`{blue [Yuri] |}  bot is {blue successfully running} and working!`,
-    );
+      chalkTemplate`{blue [Yuri] |} bot is {blue successfully running} and working!`,
+    )
 
-    process.once('SIGINT', () => result.bot.stop('SIGINT'));
-    process.once('SIGTERM', () => result.bot.stop('SIGTERM'));
+    process.once('SIGINT', () => result.bot.stop('SIGINT'))
+    process.once('SIGTERM', () => result.bot.stop('SIGTERM'))
   } catch (e) {
-    console.error(e);
+    console.error(e)
   }
 
-  return result;
-};
+  return result
+}

@@ -13,3 +13,4 @@ export default function messageModelParser(messageModel) {
     });
     return handlerSeries;
 }
+//# sourceMappingURL=mesageModelParser.js.js.map

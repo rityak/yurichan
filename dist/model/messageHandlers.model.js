@@ -36,3 +36,4 @@ export const messageHandlersModel = [
         ],
     },
 ];
+//# sourceMappingURL=messageHandlers.model.js.map
