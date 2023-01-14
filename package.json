@@ -14,7 +14,8 @@
     "build": "rimraf ./build && npx tsc",
     "dev": "npx nodemon",
     "lint": "npx eslint ./src",
-    "fix": "npx eslint ./src --fix"
+    "fix": "npx eslint ./src --fix",
+    "prepare": "husky install"
   },
   "author": "Kirill Katelyanets",
   "license": "ISC",
