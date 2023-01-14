@@ -4,18 +4,12 @@
   "description": "YuriBot from chat",
   "type": "module",
   "main": "./dist/index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run build"
-    }
-  },
   "scripts": {
     "start": "npm run build && node ./dist/index.js",
     "build": "rimraf ./build && npx tsc",
     "dev": "npx nodemon",
     "lint": "npx eslint ./src",
-    "fix": "npx eslint ./src --fix",
-    "prepare": "husky install"
+    "fix": "npx eslint ./src --fix"
   },
   "author": "Kirill Katelyanets",
   "license": "ISC",

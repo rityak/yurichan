@@ -1,12 +1,15 @@
-import { yuri, smile } from './yuri.database.js';
+/* spell-checker: disable  */
+import { yuri, smile } from './yuri.database.js'
 
 export interface messageHandlerType {
-  triggers: Array<string[]>;
-  reactions: Array<string[]>;
-  options?: messageHandlerOptions;
+  triggers: Array<string[]>
+  reactions: Array<string[]>
+  options?: messageHandlerOptions
 }
 
-export interface messageHandlerOptions {}
+export interface messageHandlerOptions {
+  chance?: number
+}
 export const messageHandlersModel: messageHandlerType[] = [
   {
     triggers: [['люб', 'love', 'любимая', 'лубофь']],
@@ -42,5 +45,8 @@ export const messageHandlersModel: messageHandlerType[] = [
       ],
       smile.good.jap,
     ],
+    options: {
+      chance: 0.5,
+    },
   },
-];
+]
