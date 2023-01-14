@@ -1,1 +1,1 @@
-# yurichan-bot
+# yuri bot
