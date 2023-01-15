@@ -1,3 +1,4 @@
+/* spell-checker: disable  */
 import { smile } from './yuri.database.js';
 export const messageHandlersModel = [
     {
@@ -34,6 +35,9 @@ export const messageHandlersModel = [
             ],
             smile.good.jap,
         ],
+        options: {
+            chance: 0.5,
+        },
     },
 ];
 //# sourceMappingURL=messageHandlers.model.js.map
