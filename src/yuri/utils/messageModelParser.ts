@@ -22,6 +22,7 @@ export default function messageModelParser(
 
       return result
     }
+
     handlerSeries.push(handler)
   })
 

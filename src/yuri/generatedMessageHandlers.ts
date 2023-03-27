@@ -18,13 +18,16 @@ export function generatedMessageHandlers(bot: Telegraf) {
         context?.message?.chat?.type === 'group'
           ? context?.message?.chat?.title
           : 'private'
+      const reply = !!context?.message?.reply_to_message
       let result
 
       if (process.env?.LOG_MESSAGE === 'true') {
         console.log(
           chalkTemplate`{blue @${
             context?.message?.from?.username
-          }->${title} |} {green :message} -> ${text.replace(/\v|\n/gi, ' ')} `,
+          }->${title} |} {green :message} {yellow ${
+            reply ? 'R' : ''
+          }} -> ${text.replace(/\v|\n/gi, ' ')} `,
         )
       }
 
@@ -34,6 +37,7 @@ export function generatedMessageHandlers(bot: Telegraf) {
       }
 
       if (result?.status && result?.value) {
+        /* Opts Parse */
         if (
           result?.value.options?.chance &&
           !chance(result?.value.options?.chance)
@@ -41,8 +45,12 @@ export function generatedMessageHandlers(bot: Telegraf) {
           return
         }
 
-        const message = choice(result.value.reactions)
+        if (result?.value?.options?.reply && !reply) {
+          return
+        }
 
+        /* Send Message */
+        const message = choice(result.value.reactions)
         try {
           context?.reply(message)
 
@@ -60,5 +68,6 @@ export function generatedMessageHandlers(bot: Telegraf) {
 
     return await next()
   }
+
   bot.on('message', messageHandlersMiddleware)
 }

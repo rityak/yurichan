@@ -11,9 +11,10 @@ export function generatedMessageHandlers(bot) {
                 context?.message?.chat?.type === 'group'
                 ? context?.message?.chat?.title
                 : 'private';
+            const reply = !!context?.message?.reply_to_message;
             let result;
             if (process.env?.LOG_MESSAGE === 'true') {
-                console.log(chalkTemplate `{blue @${context?.message?.from?.username}->${title} |} {green :message} -> ${text.replace(/\v|\n/gi, ' ')} `);
+                console.log(chalkTemplate `{blue @${context?.message?.from?.username}->${title} |} {green :message} {yellow ${reply ? 'R' : ''}} -> ${text.replace(/\v|\n/gi, ' ')} `);
             }
             for (const handler of handlers) {
                 if (result?.status)
@@ -21,10 +22,15 @@ export function generatedMessageHandlers(bot) {
                 result = handler(text);
             }
             if (result?.status && result?.value) {
+                /* Opts Parse */
                 if (result?.value.options?.chance &&
                     !chance(result?.value.options?.chance)) {
                     return;
                 }
+                if (result?.value?.options?.reply && !reply) {
+                    return;
+                }
+                /* Send Message */
                 const message = choice(result.value.reactions);
                 try {
                     context?.reply(message);

@@ -1,4 +1,4 @@
-const punctuation = '\\[\\!\\"\\#\\$\\%\\&\\\\(\\)\\*\\+\\,\\\\\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\]\\^\\_\\`\\{\\|\\}\\~\\]';
+const punctuation = '\\[\\!\\"\\#\\$\\%\\&\\\\(\\)\\*\\+\\,\\\\\\-\\.\\/\\;\\<\\=\\>\\?\\@\\[\\]\\^\\_\\`\\{\\|\\}\\~\\]';
 const regExpPunctuation = new RegExp(`[${punctuation}]`, 'gi');
 export const normalizeString = (string) => string.trim().replace(regExpPunctuation, '').toLowerCase();
 export default function contain(message, triggers) {

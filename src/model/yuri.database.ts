@@ -1,16 +1,17 @@
+/* spell-checker: disable  */
 interface typeSmile {
   good: {
-    jap: string[];
-    classic: string[];
-  };
+    jap: string[]
+    classic: string[]
+  }
   neutral: {
-    jap: string[];
-  };
+    jap: string[]
+  }
   bad: {
-    jap: string[];
-    classic: string[];
-  };
-  tilda: string[];
+    jap: string[]
+    classic: string[]
+  }
+  tilda: string[]
 }
 
 export const yuri: string[] = [
@@ -21,7 +22,7 @@ export const yuri: string[] = [
   'юрася',
   'юраченька',
   'юрасенька',
-];
+]
 
 export const smile: typeSmile = {
   good: {
@@ -45,4 +46,4 @@ export const smile: typeSmile = {
     classic: [':‹', ':(', '(', '-_-', '=(', '>:(', '>_<', 'o_O'],
   },
   tilda: ['~', '~', '~~', '~~~'],
-};
+}
