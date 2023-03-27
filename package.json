@@ -11,11 +11,7 @@
     "dev": "npx nodemon",
     "lint": "npx eslint ./src",
     "fix": "npx eslint ./src --fix",
-    "patch": "npm run commit && npm version patch && npm run push",
-    "minor": "npm run commit && npm version minor && npm run push",
-    "major": "npm run commit && npm version major && npm run push",
-    "commit": "git add . && git commit -m \"update\"",
-    "push": "npm run commit && git push"
+    "commit": "git add . && git commit -m \"update\""
   },
   "author": "Kirill Katelyanets",
   "license": "ISC",
