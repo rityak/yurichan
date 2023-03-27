@@ -15,7 +15,7 @@
     "minor": "npm run commit && npm version minor && npm run push",
     "major": "npm run commit && npm version major && npm run push",
     "commit": "git add . && git commit -m \"update\"",
-    "push": "git push"
+    "push": "npm run commit && git push"
   },
   "author": "Kirill Katelyanets",
   "license": "ISC",
