@@ -13,7 +13,5 @@ LOG_MESSAGE = "true"|"false"
 start bot
 
 ```bash
-npm i -g zx
-chmod +x ./bot
-./bot # or zx ./bot
+npm run start
 ```
