@@ -5,7 +5,8 @@
   "type": "module",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/index.js",
+    "start": "npm run update && npm run build && node ./dist/index.js",
+    "update": "git pull && npm install",
     "build": "rimraf ./build && npx tsc",
     "dev": "npx nodemon",
     "lint": "npx eslint ./src",
