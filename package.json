@@ -1,6 +1,6 @@
 {
   "name": "yurichan-ts",
-  "version": "0.1.3",
+  "version": "0.1.1",
   "description": "YuriBot from chat",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,9 +11,9 @@
     "dev": "npx nodemon",
     "lint": "npx eslint ./src",
     "fix": "npx eslint ./src --fix",
-    "patch": "npm run commit && npm version patch && npm run git push",
-    "minor": "npm run commit && npm version minor && npm run git push",
-    "major": "npm run commit && npm version major && npm run git push",
+    "patch": "npm run commit && npm version patch && npm run push",
+    "minor": "npm run commit && npm version minor && npm run push",
+    "major": "npm run commit && npm version major && npm run push",
     "commit": "git add . && git commit -m \"update\"",
     "push": "git push"
   },
