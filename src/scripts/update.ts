@@ -1,4 +1,5 @@
 import { Telegraf } from 'telegraf'
+import { $ } from 'zx'
 
 import isAdmin from '../yuri/utils/isAdmin.js'
 
@@ -9,7 +10,7 @@ export default function updateBot(bot: Telegraf) {
     setTimeout(async () => {
       if (success) {
         bot.stop()
-        // await $`npm run start`
+        await $`npm run start`
       }
     }, 1000)
   })

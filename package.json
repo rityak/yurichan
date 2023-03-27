@@ -30,6 +30,7 @@
     "chalk": "^5.2.0",
     "chalk-template": "^0.5.0",
     "dotenv": "^16.0.3",
-    "telegraf": "^4.11.2"
+    "telegraf": "^4.11.2",
+    "zx": "^7.2.1"
   }
 }
