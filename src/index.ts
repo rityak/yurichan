@@ -4,6 +4,7 @@ import { execute } from './execute.js'
 import { generatedMessageHandlers } from './yuri/generatedMessageHandlers.js'
 import chatSuccess from './yuri/chatSuccess.js'
 import userJoins from './scripts/join.js'
+import updateBot from './scripts/update.js'
 
 await execute(() => {
   const USE_IN_CHATS = ['-1001839637577']
@@ -15,6 +16,8 @@ await execute(() => {
     // USE_IN_CHATS.push('-1001635567203') /* Подземелие */
     USE_IN_CHATS.push('-1001764819230') /* Подвал */
   }
+
+  updateBot(bot)
 
   chatSuccess(bot, USE_IN_CHATS)
   userJoins(bot, USE_IN_CHATS)
