@@ -10,8 +10,8 @@
     "build": "rimraf ./build && npx tsc",
     "dev": "npx nodemon",
     "lint": "npx eslint ./src",
-    "fix": "npx eslint ./src --fix",
-    "commit": "git add . && git commit -m \"update\""
+    "fix": "npx eslint ./dist --fix",
+    "commit": "npm run build && npm run fix && git add . && git commit -m \"update\""
   },
   "author": "Kirill Katelyanets",
   "license": "ISC",
