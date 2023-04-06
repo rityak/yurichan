@@ -13,8 +13,8 @@ await execute(() => {
   const bot: Telegraf = new Telegraf(TOKEN)
 
   if (PRODUCTION) {
-    // USE_IN_CHATS.push('-1001635567203') /* Подземелие */
-    USE_IN_CHATS.push('-1001764819230') /* Подвал */
+    USE_IN_CHATS.push('-1001635567203') /* Подземелие */
+    // USE_IN_CHATS.push('-1001764819230') /* Подвал */
   }
 
   updateBot(bot)
